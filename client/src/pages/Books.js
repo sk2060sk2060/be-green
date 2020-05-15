@@ -21,7 +21,7 @@ function Books() {
   // Loads all books and sets them to books
   function loadBooks() {
     API.getBooks()
-      .then((res) => setBooks(res.data))
+      .then((res) => setBooks([]))
       .catch((err) => console.log(err));
   }
 
