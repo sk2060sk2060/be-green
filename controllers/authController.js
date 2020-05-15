@@ -21,14 +21,14 @@ userController.doRegister = function (req, res) {
   User.register(
     new User({ username: req.body.email, name: req.body.email }),
     req.body.password,
-    function (err, user) {
-      if (err) {
-        console.log(err);
-        return res.render("/", { user: user });
+    function (error, user) {
+      if (error) {
+        error.status = "fail";
+        return res.json(error);
       }
 
       passport.authenticate("local")(req, res, function () {
-        res.redirect("/");
+        return res.json({ status: "ok", message: "Welcome" });
       });
     }
   );
