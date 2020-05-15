@@ -14,7 +14,7 @@ class Signup extends Component {
     this.setState({ password: event.target.value });
   };
 
-  handleSubmit = (event) => {
+  handleSubmit = async (event) => {
     event.preventDefault();
     const { email, password } = this.state;
 
@@ -24,7 +24,12 @@ class Signup extends Component {
     };
     console.log("userdata:", userData);
 
-    axios.post("/api/register", userData);
+    const response = await axios.post("/api/users/register", userData);
+    const { status, message } = response.data;
+    console.log({ status, message });
+
+    // if(status === 'ok' ) // redirect to page xxx
+    // if( status === 'fail') // show a message to the user
   };
 
   render() {
@@ -93,3 +98,16 @@ class Signup extends Component {
 }
 
 export default Signup;
+
+//error message
+// <div class="row">
+// <form class="col s12">
+//   <div class="row">
+//     <div class="input-field col s12">
+//       <input id="email" type="email" class="validate">
+//       <label for="email">Email</label>
+//       <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
+//     </div>
+//   </div>
+// </form>
+// </div>

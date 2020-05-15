@@ -5,7 +5,8 @@ mongoose.Promise = global.Promise;
 const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
-const LocalStrategy = require("passport-local").Strategy;
+//const LocalStrategy = require("passport-local").Strategy;
+const LocalStrategy = require("./passport/localStrategy");
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -14,6 +15,7 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 // Add routes, both API and view
+
 app.use(routes);
 // passport config items
 app.use(
@@ -25,14 +27,15 @@ app.use(
 );
 app.use(passport.initialize());
 app.use(passport.session());
-var User = require("./models/user");
-passport.use(new LocalStrategy(User.authenticate()));
+var User = require("./database/models/user");
+
+// passport.use(LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 // Connect to the Mongo DB
 mongoose
-  .connect(process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist")
+  .connect(process.env.MONGODB_URI || "mongodb://localhost/begreen")
   .then(() => console.log("connection succesful"))
   .catch((err) => console.error(err));
 

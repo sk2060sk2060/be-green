@@ -9,23 +9,24 @@ import Nav from "./components/Nav";
 function App() {
   return (
     <Router>
-      <div>
-        <Nav />
-        <Switch>
-          <Route exact path={["/registration"]}>
-            <Registration />
-          </Route>
-          <Route exact path={["/", "/books"]}>
-            <Books />
-          </Route>
-          <Route exact path="/books/:id">
-            <Detail />
-          </Route>
-          <Route>
-            <NoMatch />
-          </Route>
-        </Switch>
-      </div>
+      <Nav />
+      <Switch>
+        <Route exact path={["/active"]}>
+          <Books />
+        </Route>
+        <Route exact path={["/login", "/entrar"]}>
+          <Registration />
+        </Route>
+        <Route exact path={["/"]}>
+          <Registration />
+        </Route>
+        <Route exact path="/books/:id">
+          <Detail />
+        </Route>
+        <Route>
+          <NoMatch />
+        </Route>
+      </Switch>
     </Router>
   );
 }
