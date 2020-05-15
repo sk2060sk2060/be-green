@@ -24,7 +24,7 @@ class Signup extends Component {
     };
     console.log("userdata:", userData);
 
-    axios.post("/api/register", userData);
+    axios.post("/api/users/register", userData);
   };
 
   render() {
