@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-
+import "./pages.css";
 class Signup extends Component {
   state = {
     email: "",
@@ -36,14 +36,17 @@ class Signup extends Component {
     return (
       <div>
         <div className="container center">
-          <div className="card has-text-centered is-wide card-content">
+          <div
+            className="card has-text-centered is-wide card-content"
+            id="registerbox"
+          >
+            {" "}
             <h1 className="go-green">Be Green</h1>
-
             <img src="/assets/images/recyclelogo.jpg" alt-pro="img"></img>
-
             <form className="login animated fadeIn delay-0.5s">
+              {" "}
               <div className="field">
-                Register
+                If you have not registered, please do so now.
                 <p className="control has-icons-left has-icons-right">
                   <input
                     onChange={this.handleChangeEmail}
@@ -66,7 +69,7 @@ class Signup extends Component {
                   <input
                     onChange={this.handleChangePassword}
                     value={this.state.password}
-                    className="input"
+                    //className="input"
                     type="password"
                     placeholder="Password"
                     name="password"
@@ -80,6 +83,7 @@ class Signup extends Component {
                 <p className="control">
                   <button
                     className="button is-info is-light"
+                    id="registerbtn"
                     onClick={this.handleSubmit}
                   >
                     Register
@@ -87,7 +91,10 @@ class Signup extends Component {
                 </p>
               </div>
               <p>
-                Or login <a href="/login">here</a>
+                Or login{" "}
+                <a href="/login" id="loginbtn">
+                  here
+                </a>
               </p>
             </form>
           </div>

@@ -1,6 +1,8 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-// import Grid from '@material-ui/core/Grid';
+import "./footer.css";
+
+import Grid from "@material-ui/core/Grid";
 import {
   Typography,
   Grid,
@@ -8,14 +10,14 @@ import {
   ListItem,
   ListItemText,
 } from "@material-ui/core";
-// import List from '@material-ui/core/List';
-// import ListItem from '@material-ui/core/ListItem';
-// import ListItemText from '@material-ui/core/ListItemText';
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemText from "@material-ui/core/ListItemText";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    backgroundColor: "#80d8ff",
+    backgroundColor: ,
   },
   typography: {
     padding: theme.spacing(2),
@@ -36,7 +38,7 @@ function Footer() {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <Grid container spacing={3}>
+      <Grid id="grid" container spacing={3}>
         <Grid item sm={6}>
           <Typography
             className={classes.typography}
