@@ -1,12 +1,17 @@
 import React, {Component} from "react"
 import axios from "axios"
+import {
+    BrowserRouter as Router,
+    Link,
+    Redirect,
+  } from "react-router-dom";
 
 class Login extends Component {
 
 state={
     email:"",
-    password:""
-
+    password:"",
+    login: false,
 }
 
 
@@ -19,13 +24,22 @@ handleChange = (event)=>{
 
 }
 
-handleSubmit = (event) => {
+handleSubmit = async (event) => {
     event.preventDefault();
     var userData = {
       email:this.state.email,
       password: this.state.password
     };
-    console.log("userdata:", userData)
+    console.log("send login userdata:", userData)
+ 
+    const response = await axios.post("/api/users/checkuser", userData);
+    const { status, message } = response.data;
+    console.log({ status, message });
+
+    if (status === 'ok') {
+      this.setState({ login: true })
+
+    }
 
     // axios call to the route 
     // if (!userData.email || !userData.password) {
@@ -37,6 +51,8 @@ handleSubmit = (event) => {
 }
     
 render(){
+    if (this.state.login === true) return <Redirect to="/active"></Redirect>
+  
     return (
         <div>
             <div class="container center">

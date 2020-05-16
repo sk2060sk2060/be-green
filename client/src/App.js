@@ -4,6 +4,7 @@ import Books from "./pages/Books";
 import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
 import Registration from "./pages/Registration";
+import Login from "./pages/login";
 import Nav from "./components/Nav";
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
           <Books />
         </Route>
         <Route exact path={["/login", "/entrar"]}>
-          <Registration />
+          <Login />
         </Route>
         <Route exact path={["/"]}>
           <Registration />

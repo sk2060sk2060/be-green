@@ -1,11 +1,18 @@
 import React, { Component } from "react";
 import axios from "axios";
+import {
+  BrowserRouter as Router,
+  Link,
+  Redirect,
+} from "react-router-dom";
 
 class Signup extends Component {
   state = {
+    login: false,
     email: "",
     password: "",
   };
+
 
   handleChangeEmail = (event) => {
     this.setState({ email: event.target.value });
@@ -16,6 +23,7 @@ class Signup extends Component {
 
   handleSubmit = async (event) => {
     event.preventDefault();
+
     const { email, password } = this.state;
 
     var userData = {
@@ -28,11 +36,17 @@ class Signup extends Component {
     const { status, message } = response.data;
     console.log({ status, message });
 
-    // if(status === 'ok' ) // redirect to page xxx
+    if (status === 'ok') {
+      this.setState({ login: true })
+
+    }
     // if( status === 'fail') // show a message to the user
+
+
   };
 
   render() {
+    if (this.state.login === true) return <Redirect to="/active"></Redirect>
     return (
       <div>
         <div className="container center">
@@ -90,6 +104,7 @@ class Signup extends Component {
                 Or login <a href="/login">here</a>
               </p>
             </form>
+
           </div>
         </div>
       </div>
