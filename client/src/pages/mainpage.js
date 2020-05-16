@@ -9,8 +9,8 @@ class Mainpage extends Component {
 
     render(){
         return (
+          <React.Fragment>
 <div class="container">
-
   <h1 class="header center light-green-text go-green groove double">Be Green</h1>
   <div class="row center">
     <h5 class="header col s12 light p2">Change your habits. Change the world.</h5>
@@ -22,7 +22,7 @@ class Mainpage extends Component {
 
 <div class="section">
 
-   {/* Icon Section   */}
+
   <div class="row">
     <div class="col s12 m4">
       <div class="icon-block">
@@ -77,10 +77,10 @@ class Mainpage extends Component {
       </div>
     </div>
            
-  {/* </div> */}
 
 </div>
 </div>
+</React.Fragment>
 )}
 }
 
