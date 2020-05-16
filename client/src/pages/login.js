@@ -104,7 +104,7 @@ render(){
                                             </button>
                                         </p>
                                     </div>
-                                    <p>Or Signup <a href="/signup">here</a></p>
+                                    <p>Or Signup <a href="/register">here</a></p>
                                 </form>
                
                   </div>
