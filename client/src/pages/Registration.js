@@ -1,14 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import "./pages.css";
-<<<<<<< HEAD
-=======
-import {
-  BrowserRouter as Router,
-  Link,
-  Redirect,
-} from "react-router-dom";
->>>>>>> 2ba0d0669b97d7168aadc20d1f427638e63eb43f
+import { BrowserRouter as Router, Link, Redirect } from "react-router-dom";
 
 class Signup extends Component {
   state = {
@@ -16,7 +9,6 @@ class Signup extends Component {
     email: "",
     password: "",
   };
-
 
   handleChangeEmail = (event) => {
     this.setState({ email: event.target.value });
@@ -40,17 +32,14 @@ class Signup extends Component {
     const { status, message } = response.data;
     console.log({ status, message });
 
-    if (status === 'ok') {
-      this.setState({ login: true })
-
+    if (status === "ok") {
+      this.setState({ login: true });
     }
     // if( status === 'fail') // show a message to the user
-
-
   };
 
   render() {
-    if (this.state.login === true) return <Redirect to="/mainpage"></Redirect>
+    if (this.state.login === true) return <Redirect to="/mainpage"></Redirect>;
     return (
       <div>
         <div className="container center">
@@ -117,7 +106,6 @@ class Signup extends Component {
                 </a>
               </p>
             </form>
-
           </div>
         </div>
       </div>
