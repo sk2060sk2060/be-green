@@ -1,0 +1,33 @@
+#registerbox {
+  background-color: rgba(109, 192, 109, 0.781);
+  text-align: center;
+}
+img {
+  margin-left: 40%;
+}
+
+.go-green {
+  border: solid;
+  border-color: green;
+  background-color: rgba(134, 198, 228, 0.4);
+  padding: 30px;
+  margin-left: 20%;
+  margin-right: 20%;
+  font-size: 50px;
+}
+
+#registerbtn {
+  padding: 5px;
+  color: blue;
+}
+
+#loginbtn {
+  color: blue;
+}
+
+.card-content {
+  background-color: rgba(109, 192, 109, 0.781);
+  width: 50%;
+  margin: 5% 23% 5% 23%;
+  padding-top: 25px;
+}

@@ -1,13 +1,11 @@
 import React from "react";
-import { Typography, Grid, List, ListItem, ListItemText } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import "./footer.css";
+import { Typography, Grid, List, ListItem, ListItemText } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    // flexGrow: 1,
-    // backgroundColor: "#80d8ff",
-    // backgroundColor:  "hsla(176, 80%, 59%, 0.8)",
-    // fontWeight: 900,
+    flexGrow: 1,
   },
   typography: {
     padding: theme.spacing(2),
@@ -32,9 +30,13 @@ function Footer() {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <Grid container spacing={3}>
-        <Grid item sm={7}>
-          <Typography className={classes.typography}  variant="h6">
+      <Grid id="grid" container spacing={3}>
+        <Grid item sm={6}>
+          <Typography
+            className={classes.typography}
+            variant="h6"
+            color="inherit"
+          >
             About Us
           </Typography>
           <Typography className={classes.typography}>

@@ -1,23 +1,33 @@
-import React from "react";
+import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Books from "./pages/Books";
 import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
 import Registration from "./pages/Registration";
+
+import Footer from "./components/Footer/index";
 import Login from "./pages/login";
 // import Nav from "./components/Nav";
 import MainPage from "./pages/mainpage";
 import Maps from "./pages/maps";
 
+
 function App() {
   return (
     <Router>
+
       {/* <Nav /> */}
       <Switch>
+
+        <Route component={Books} exact path={["/active"]}></Route>
+        <Route exact path={["/login", "/entrar"]}>
+          <Registration />
+        </Route>
         <Route exact path={["/active"]}>
           <Books />
         </Route>
         <Route exact path={["/register",]}>
+
           <Registration />
         </Route>        
         <Route exact path={["/", "/login"]}>
@@ -36,6 +46,7 @@ function App() {
           <NoMatch />
         </Route>
       </Switch>
+      <Footer />
     </Router>
   );
 }

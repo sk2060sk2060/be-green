@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,6 +35,7 @@
   to {
     transform: rotate(360deg);
   }
+
 }
 /* body {
   background: url("/assets/images/forestlakebackground.jpg") no-repeat center
@@ -47,6 +48,13 @@
   background-color: rgba(109, 192, 109, 0.781);
   width: 50%;
   margin: 0% 23%;
+
+} 
+body {
+  background: url("/assets/images/forestlakebackground.jpg") no-repeat center
+    center;
+  background-size: cover;
+  height: 900px;
 }
 
 #email-input {
