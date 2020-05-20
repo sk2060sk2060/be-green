@@ -14,6 +14,25 @@ import Maps from "./pages/maps";
 
 function App() {
   return (
+<<<<<<< HEAD
+    <div id="backgroundimg">
+      <Router>
+        <Switch>
+          <Route component={Books} exact path={["/active"]}></Route>
+          <Route exact path={["/"]}>
+            <Registration />
+          </Route>
+          <Route exact path="/books/:id">
+            <Detail />
+          </Route>
+          <Route>
+            <NoMatch />
+          </Route>
+        </Switch>
+        <Footer />
+      </Router>
+    </div>
+=======
     <Router>
 
       {/* <Nav /> */}
@@ -48,6 +67,7 @@ function App() {
       </Switch>
       <Footer />
     </Router>
+>>>>>>> 2ba0d0669b97d7168aadc20d1f427638e63eb43f
   );
 }
 

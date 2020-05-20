@@ -1,3 +1,9 @@
+.card-content {
+  width: 50%;
+  margin: 5% 23% 5% 23%;
+  padding-top: 25px;
+}
+
 #registerbox {
   background-color: rgba(109, 192, 109, 0.781);
   text-align: center;
@@ -25,9 +31,10 @@ img {
   color: blue;
 }
 
-.card-content {
-  background-color: rgba(109, 192, 109, 0.781);
-  width: 50%;
-  margin: 5% 23% 5% 23%;
-  padding-top: 25px;
+#einput {
+  width: 260px;
+}
+
+#pinput {
+  width: 260px;
 }
