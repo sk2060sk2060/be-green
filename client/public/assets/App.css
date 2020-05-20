@@ -36,23 +36,13 @@
     transform: rotate(360deg);
   }
 } */
-body {
-  background: url("/assets/images/forestlakebackground.jpg") no-repeat center
-    center;
-  background-size: cover;
-  height: 900px;
-}
-
-#email-input {
-  width: 360px;
-}
-
-#password-input {
-  width: 400px;
+#backgroundimg {
+  background: url("/assets/images/forestlakebackground.jpg");
+  background-repeat: no-repeat;
 }
 
 .footer-copyright {
-  background-color: rgba(0, 0, 255, 0.466);
+  background-color: rgba(3, 168, 244, 0.69);
 }
 
 .go-green {

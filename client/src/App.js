@@ -8,24 +8,23 @@ import Footer from "./components/Footer/index";
 
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Route component={Books} exact path={["/active"]}></Route>
-        <Route exact path={["/login", "/entrar"]}>
-          <Registration />
-        </Route>
-        <Route exact path={["/"]}>
-          <Registration />
-        </Route>
-        <Route exact path="/books/:id">
-          <Detail />
-        </Route>
-        <Route>
-          <NoMatch />
-        </Route>
-      </Switch>
-      <Footer />
-    </Router>
+    <div id="backgroundimg">
+      <Router>
+        <Switch>
+          <Route component={Books} exact path={["/active"]}></Route>
+          <Route exact path={["/"]}>
+            <Registration />
+          </Route>
+          <Route exact path="/books/:id">
+            <Detail />
+          </Route>
+          <Route>
+            <NoMatch />
+          </Route>
+        </Switch>
+        <Footer />
+      </Router>
+    </div>
   );
 }
 
