@@ -1,30 +1,26 @@
 import React from "react";
+import { Typography, Grid, List, ListItem, ListItemText } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-// import Grid from '@material-ui/core/Grid';
-import {
-  Typography,
-  Grid,
-  List,
-  ListItem,
-  ListItemText,
-} from "@material-ui/core";
-// import List from '@material-ui/core/List';
-// import ListItem from '@material-ui/core/ListItem';
-// import ListItemText from '@material-ui/core/ListItemText';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
-    backgroundColor: "#80d8ff",
+    // flexGrow: 1,
+    // backgroundColor: "#80d8ff",
+    // backgroundColor:  "hsla(176, 80%, 59%, 0.8)",
+    // fontWeight: 900,
   },
   typography: {
     padding: theme.spacing(2),
-    //   textAlign: 'center',
-    color: theme.palette.text.secondary,
+    color: "white",
+    // fontWeight: "bold",
   },
   listItem: {
     padding: theme.spacing(0.02),
-    color: theme.palette.text.secondary,
+    color: "white",
+  },
+  list: {
+    marginLeft: "8px",
+    paddingLeft: "8px",
   },
 }));
 
@@ -37,12 +33,8 @@ function Footer() {
   return (
     <div className={classes.root}>
       <Grid container spacing={3}>
-        <Grid item sm={6}>
-          <Typography
-            className={classes.typography}
-            variant="h6"
-            color="inherit"
-          >
+        <Grid item sm={7}>
+          <Typography className={classes.typography}  variant="h6">
             About Us
           </Typography>
           <Typography className={classes.typography}>
@@ -52,20 +44,13 @@ function Footer() {
             home safe and healthy. So we're here to help.
           </Typography>
         </Grid>
-        <Grid item sm={6}>
-          <Typography
-            className={classes.typography}
-            variant="h6"
-            color="inherit"
-          >
+        <Grid item sm={5}>
+          <Typography className={classes.typography} variant="h6" color="inherit">
             Connect with Us
           </Typography>
-          <List>
+          <List className={classes.list}>
             <ListItemLink className={classes.listItem} href="#">
               <ListItemText primary="Email" />
-            </ListItemLink>
-            <ListItemLink className={classes.listItem} href="#">
-              <ListItemText primary="Linkedin" />
             </ListItemLink>
             <ListItemLink className={classes.listItem} href="#">
               <ListItemText primary="Instagram" />

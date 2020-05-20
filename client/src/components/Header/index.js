@@ -6,6 +6,7 @@ import logo from "./recyclelogo.jpg";
 const useStyles = makeStyles({
   logo: {
     maxWidth: 50,
+    maxHeight: 50,
   },
   logoLocation: {
     marginLeft: "auto",

@@ -1,11 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import {
-  Card,
-  CardContent,
-  CardActionArea,
-  Typography,
-} from "@material-ui/core";
+import { Card, CardContent, CardActionArea, Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   heading: {
@@ -14,6 +9,9 @@ const useStyles = makeStyles((theme) => ({
   },
   cardStyle: {
     margin: "20px",
+    // background: "#00008080",
+    // background: "hsla(148, 43%, 42%, 0.51)",
+    background: "hsla(148, 43%, 42%, 0.8)",
   },
 }));
 
@@ -23,16 +21,21 @@ function LearnMoreCard() {
   return (
     <Card className={classes.cardStyle}>
       <CardContent>
-        <Typography variant="h6">Learn More</Typography>
+        <Typography variant="h6">
+          Learn More
+        </Typography>
       </CardContent>
       <CardActionArea>
         <div
           className="video"
           style={{
             position: "relative",
-            paddingBottom: "56.25%" /* 16:9 */,
-            paddingTop: 25,
-            height: 0,
+            paddingBottom: "50%" /* 16:9 */,
+            paddingTop: 2,
+            height: 300,
+            // width: 350,
+            // height: "300px",
+            // width: "350px",
           }}
         >
           <iframe

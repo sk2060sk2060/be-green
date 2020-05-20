@@ -2162,12 +2162,12 @@
   /**
    * Remove the margin in all browsers (opinionated).
    */
-  body {
+  /* body {
     margin: 0;
     background: url("../../assets/images/forestlakebackground.jpg") no-repeat center center;
     background-size: cover;
-  }
-  
+  } */
+ 
   /**
    * Add the correct display in IE 9-.
    */

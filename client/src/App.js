@@ -5,14 +5,14 @@ import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
 import Registration from "./pages/Registration";
 import Login from "./pages/login";
-import Nav from "./components/Nav";
+// import Nav from "./components/Nav";
 import MainPage from "./pages/mainpage";
 import Maps from "./pages/maps";
 
 function App() {
   return (
     <Router>
-      <Nav />
+      {/* <Nav /> */}
       <Switch>
         <Route exact path={["/active"]}>
           <Books />
