@@ -1,11 +1,29 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import "./footer.css";
-import { Typography, Grid, List, ListItem, ListItemText } from "@material-ui/core";
+import {
+  Typography,
+  Grid,
+  List,
+  ListItem,
+  ListItemText,
+} from "@material-ui/core";
+// import Grid from '@material-ui/core/Grid';
+import {
+  Typography,
+  Grid,
+  List,
+  ListItem,
+  ListItemText,
+} from "@material-ui/core";
+// import List from '@material-ui/core/List';
+// import ListItem from '@material-ui/core/ListItem';
+// import ListItemText from '@material-ui/core/ListItemText';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    backgroundColor: "rgba(3, 168, 244, 0.69)",
   },
   typography: {
     padding: theme.spacing(2),
@@ -29,8 +47,8 @@ function ListItemLink(props) {
 function Footer() {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
-      <Grid id="grid" container spacing={3}>
+    <div id="footer" className={classes.root}>
+      <Grid container spacing={3}>
         <Grid item sm={6}>
           <Typography
             className={classes.typography}
@@ -47,7 +65,11 @@ function Footer() {
           </Typography>
         </Grid>
         <Grid item sm={5}>
-          <Typography className={classes.typography} variant="h6" color="inherit">
+          <Typography
+            className={classes.typography}
+            variant="h6"
+            color="inherit"
+          >
             Connect with Us
           </Typography>
           <List className={classes.list}>

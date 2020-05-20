@@ -1,11 +1,14 @@
 import React, { Component } from "react";
 import axios from "axios";
 import "./pages.css";
+<<<<<<< HEAD
+=======
 import {
   BrowserRouter as Router,
   Link,
   Redirect,
 } from "react-router-dom";
+>>>>>>> 2ba0d0669b97d7168aadc20d1f427638e63eb43f
 
 class Signup extends Component {
   state = {
@@ -64,6 +67,7 @@ class Signup extends Component {
                 If you have not registered, please do so now.
                 <p className="control has-icons-left has-icons-right">
                   <input
+                    id="einput"
                     onChange={this.handleChangeEmail}
                     value={this.state.email}
                     type="email"
@@ -82,6 +86,7 @@ class Signup extends Component {
               <div className="field">
                 <p className="control has-icons-left">
                   <input
+                    id="pinput"
                     onChange={this.handleChangePassword}
                     value={this.state.password}
                     //className="input"
