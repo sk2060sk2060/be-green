@@ -7,7 +7,7 @@ import Registration from "./pages/Registration";
 
 import Footer from "./components/Footer/index";
 import Login from "./pages/login";
-import Nav from "./components/Nav";
+// import Nav from "./components/Nav";
 import MainPage from "./pages/mainpage";
 import Maps from "./pages/maps";
 
@@ -15,14 +15,14 @@ import Maps from "./pages/maps";
 function App() {
   return (
     <Router>
+
+      {/* <Nav /> */}
       <Switch>
 
         <Route component={Books} exact path={["/active"]}></Route>
         <Route exact path={["/login", "/entrar"]}>
           <Registration />
         </Route>
-        <Route exact path={["/"]}>
-
         <Route exact path={["/active"]}>
           <Books />
         </Route>

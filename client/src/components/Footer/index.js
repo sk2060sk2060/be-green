@@ -1,32 +1,24 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import "./footer.css";
-
-import Grid from "@material-ui/core/Grid";
-import {
-  Typography,
-  Grid,
-  List,
-  ListItem,
-  ListItemText,
-} from "@material-ui/core";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemText from "@material-ui/core/ListItemText";
+import { Typography, Grid, List, ListItem, ListItemText } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    backgroundColor: ,
   },
   typography: {
     padding: theme.spacing(2),
-    //   textAlign: 'center',
-    color: theme.palette.text.secondary,
+    color: "white",
+    // fontWeight: "bold",
   },
   listItem: {
     padding: theme.spacing(0.02),
-    color: theme.palette.text.secondary,
+    color: "white",
+  },
+  list: {
+    marginLeft: "8px",
+    paddingLeft: "8px",
   },
 }));
 
@@ -54,20 +46,13 @@ function Footer() {
             home safe and healthy. So we're here to help.
           </Typography>
         </Grid>
-        <Grid item sm={6}>
-          <Typography
-            className={classes.typography}
-            variant="h6"
-            color="inherit"
-          >
+        <Grid item sm={5}>
+          <Typography className={classes.typography} variant="h6" color="inherit">
             Connect with Us
           </Typography>
-          <List>
+          <List className={classes.list}>
             <ListItemLink className={classes.listItem} href="#">
               <ListItemText primary="Email" />
-            </ListItemLink>
-            <ListItemLink className={classes.listItem} href="#">
-              <ListItemText primary="Linkedin" />
             </ListItemLink>
             <ListItemLink className={classes.listItem} href="#">
               <ListItemText primary="Instagram" />

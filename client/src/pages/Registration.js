@@ -47,7 +47,7 @@ class Signup extends Component {
   };
 
   render() {
-    if (this.state.login === true) return <Redirect to="/active"></Redirect>
+    if (this.state.login === true) return <Redirect to="/mainpage"></Redirect>
     return (
       <div>
         <div className="container center">
