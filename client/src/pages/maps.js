@@ -1,12 +1,17 @@
 import React, {Component} from "react"
 
+class Maps extends Component {
+
+  state = {
+
+  }
 
 
+  render(){
+      return (
 
 
-
-
-<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+{/* <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
 crossorigin="anonymous"></script>
 <script>
 var service;
@@ -90,8 +95,15 @@ $(document).on("click", "#search", function () {
 <p id="demo"></p>
 <div id="map"></div>
 
-<script>src = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?keyword=recycle&apikey=AIzaSyBZHzPiRourRDRoivXdhrjA4zdOhqEVYcQ"</script>
+<script src = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?keyword=recycle&apikey=AIzaSyBZHzPiRourRDRoivXdhrjA4zdOhqEVYcQ"></script>
 <script
 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZHzPiRourRDRoivXdhrjA4zdOhqEVYcQ&libraries=places&callback=initMap"
 async defer>
-</script>
+</script> */}
+
+
+
+)}
+}
+
+export default Maps;
