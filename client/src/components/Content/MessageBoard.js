@@ -1,7 +1,7 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
 import { Card, CardContent, CardActionArea, Typography } from "@material-ui/core";
 import { ListItem, ListItemText } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
   heading: {
@@ -40,8 +40,9 @@ function MessageBoard() {
       </CardContent>
       <CardActionArea className={classes.cardAction}>
         <div>
-          <ListItemLink href="#">
-            <ListItemText primary="Chat It Up >>" />
+          <ListItemLink href="/articles">
+            {/* <ListItemText primary="Chat It Up >>" /> */}
+            <ListItemText primary="Search Articles >>" />
           </ListItemLink>  
         </div>
       </CardActionArea>
