@@ -32,10 +32,10 @@ function MessageBoard() {
     <Card className={classes.cardStyle}>
       <CardContent>
         <Typography variant="h6">
-          Message Board
+          Find Out More
         </Typography>
         <Typography variant="body2">
-          Be inspired. Share your story.
+          Search Environmental News.
         </Typography>
       </CardContent>
       <CardActionArea className={classes.cardAction}>
