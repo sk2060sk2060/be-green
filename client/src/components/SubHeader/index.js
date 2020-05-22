@@ -8,14 +8,26 @@ const useStyles = makeStyles({
     flexGrow: 1,
     textAlign: "center",
     // color: "#006400",
-    color: "#003434",
+    color: "#194D33",
     paddingBottom: "8px",
     fontWeight: "bold",
     fontFamily: "Arial",
   },
+
+  // .go-green {
+  //   border: solid;
+  //   border-color: green;
+  //   background-color: rgba(134, 198, 228, 0.4);
+  //   padding: 30px;
+  //   margin-left: 20%;
+  //   margin-right: 20%;
+  //   font-size: 50px;
+  // }
+
   textContent: {
     textAlign: "center",
     fontWeight: "bold",
+    color: "#0A3A22",
   },
 });
 

@@ -1,6 +1,15 @@
 import React from "react";
-import { Card, CardContent, CardActionArea, Typography } from "@material-ui/core";
-import { ExpansionPanel, ExpansionPanelSummary, ExpansionPanelDetails } from "@material-ui/core";
+import {
+  Card,
+  CardContent,
+  CardActionArea,
+  Typography,
+} from "@material-ui/core";
+import {
+  ExpansionPanel,
+  ExpansionPanelSummary,
+  ExpansionPanelDetails,
+} from "@material-ui/core";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import { List, ListItem, ListItemText } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
@@ -15,13 +24,13 @@ const useStyles = makeStyles((theme) => ({
     // background: "#008080",
     // maxWidth: 345,
     // background: "hsla(148, 43%, 42%, 0.51)",
-    background: "hsla(148, 43%, 42%, 0.8)",
+    background: "rgba(109, 192, 109, 0.9)",
   },
   expansionPanel: {
     // backgroundColor: "#008B8B",
     // background: "hsla(148, 43%, 42%, 0.51)",
-    background: "hsla(148, 43%, 42%, 0.8)",
-  }
+    background: "rgba(109, 192, 109, 0.9)",
+  },
 }));
 
 function ListItemLink(props) {
@@ -34,9 +43,7 @@ function RecycleInfoCard() {
   return (
     <Card className={classes.cardStyle}>
       <CardContent>
-        <Typography variant="h6">
-          How To Recycle
-        </Typography>
+        <Typography variant="h6">How To Recycle</Typography>
         <Typography variant="body2">
           Recycling can be confusing. Can you recycle this or that? Where does
           it go? But there's no need to stress anymore. Get your answers here.
@@ -50,7 +57,7 @@ function RecycleInfoCard() {
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-            <Typography className={classes.heading}>Materials</Typography>
+              <Typography className={classes.heading}>Materials</Typography>
             </ExpansionPanelSummary>
             <ExpansionPanelDetails>
               <List component="nav" aria-label="secondary mailbox folders">

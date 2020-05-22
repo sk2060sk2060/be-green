@@ -1,6 +1,11 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Card, CardContent, CardActionArea, Typography } from "@material-ui/core";
+import {
+  Card,
+  CardContent,
+  CardActionArea,
+  Typography,
+} from "@material-ui/core";
 import { ListItem, ListItemText } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
@@ -13,13 +18,13 @@ const useStyles = makeStyles((theme) => ({
     // background: "#008080",
     // maxWidth: 345,
     // background: "hsla(148, 43%, 42%, 0.51)",
-    background: "hsla(148, 43%, 42%, 0.8)",
+    background: "rgba(109, 192, 109, 0.9)",
   },
   cardAction: {
     // backgroundColor: "#008B8B",
     // background: "hsla(148, 43%, 42%, 0.51)",
-    background: "hsla(148, 43%, 42%, 0.8)",
-  }
+    background: "rgba(109, 192, 109, 0.9)",
+  },
 }));
 
 function ListItemLink(props) {
@@ -32,9 +37,7 @@ function RecycleLocationCard() {
   return (
     <Card className={classes.cardStyle}>
       <CardContent>
-        <Typography variant="h6">
-          Find Recyle Locations Near You
-        </Typography>
+        <Typography variant="h6">Find Recyle Locations Near You</Typography>
         <Typography variant="body2">
           Does your community not have a recycle center? No problem. Search for
           one here and do your part.
@@ -43,8 +46,8 @@ function RecycleLocationCard() {
       <CardActionArea className={classes.cardAction}>
         <div>
           <ListItemLink href="/maps">
-              <ListItemText primary="Search >>" />
-            </ListItemLink>      
+            <ListItemText primary="Search >>" />
+          </ListItemLink>
         </div>
       </CardActionArea>
     </Card>
