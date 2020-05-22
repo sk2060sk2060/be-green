@@ -4,9 +4,29 @@ import axios from "axios";
 import API from "../utils/API";
 import "./maps.css";
 
-const AnyReactComponent = ({ text }) => {
-  console.log(text);
-  return <div>{text}</div>;
+const AnyReactComponent = ({ text, lat, lng }) => {
+  return (
+    <div
+      //   onClick = {(text, lat, lng )=> {
+      //  axios.
+
+      //   }}
+      key={`${lat} ${lng}`}
+      style={{
+        color: "white",
+        background: "grey",
+        padding: "15px 10px",
+        display: "inline-flex",
+        textAlign: "center",
+        alignItems: "center",
+        justifyContent: "center",
+        borderRadius: "100%",
+        transform: "translate(-50%, -50%)",
+      }}
+    >
+      {text}
+    </div>
+  );
 };
 
 class SimpleMap extends Component {
@@ -16,14 +36,27 @@ class SimpleMap extends Component {
     center: { lat: 37.7576792, lng: -122.5078115 },
   };
   componentDidMount = () => {
+    var options = {
+      enableHighAccuracy: true,
+      timeout: 5000,
+      maximumAge: 0,
+    };
+
+    const error = (err) => {
+      console.warn(`ERROR(${err.code}): ${err.message}`);
+    };
+
+    navigator.geolocation.getCurrentPosition(this.success, error, options);
     this.getMaps();
-    // axios
-    //   .get(
-    //     `https:api.earth911.com/earth911.searchLocations?api_key=7827591ea2eb59e9&latitude=48.8583701&longitude=2.2922926`
-    //   )
-    //   .then(function (results) {
-    //     console.log(results);
-    //   });
+  };
+  success = (pos) => {
+    var crd = pos.coords;
+
+    console.log("Your current position is:");
+    console.log(`Latitude : ${crd.latitude}`);
+    console.log(`Longitude: ${crd.longitude}`);
+    console.log(`More or less ${crd.accuracy} meters.`);
+    this.setState({ center: { lat: crd.latitude, lng: crd.longitude } });
   };
 
   getMaps = () => {
@@ -104,6 +137,7 @@ class SimpleMap extends Component {
             }}
             defaultCenter={this.state.center}
             defaultZoom={this.props.zoom}
+            center={this.state.center}
           >
             {this.state.recycleLocations.map((elem) => {
               return (

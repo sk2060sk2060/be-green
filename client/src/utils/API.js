@@ -19,4 +19,7 @@ export default {
         .join("")}`
     );
   },
+  getSave: function (text, lat, lng) {
+    return axios.post();
+  },
 };
