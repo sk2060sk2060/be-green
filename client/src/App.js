@@ -10,39 +10,39 @@ import Login from "./pages/login";
 // import Nav from "./components/Nav";
 import MainPage from "./pages/mainpage";
 import Maps from "./pages/maps";
+import Articles from  "./pages/Articles";
 
 function App() {
   return (
     <div>
       <Router>
-        <Switch>
-          <Route component={Books} exact path={["/active"]}></Route>
-          <Route exact path={["/login", "/entrar"]}>
-            <Registration />
-          </Route>
-          <Route exact path={["/active"]}>
-            <Books />
-          </Route>
-          <Route exact path={["/register"]}>
-            <Registration />
-          </Route>
-          <Route exact path={["/", "/login"]}>
-            <Login />
-          </Route>
-          <Route exact path="/books/:id">
-            <Detail />
-          </Route>
-          <Route exact path={["/mainpage"]}>
-            <MainPage />
-          </Route>
-          <Route exact path={["/maps"]}>
-            <Maps />
-          </Route>
-          <Route>
-            <NoMatch />
-          </Route>
-        </Switch>
-        <Footer />
+      <Switch>
+        <Route exact path={["/active"]}>
+          <Books />
+        </Route>
+        <Route exact path={["/register",]}>
+          <Registration />
+        </Route>        
+        <Route exact path={["/", "/login"]}>
+          <Login />
+        </Route>
+        <Route exact path="/books/:id">
+          <Detail />
+        </Route>
+        <Route exact path={["/mainpage",]}>
+          <MainPage />
+        </Route>
+        <Route exact path={["/maps",]}>
+          <Maps />
+        </Route>
+        <Route exact path={["/articles"]}>
+          <Articles />
+        </Route>                  
+        <Route>
+          <NoMatch />
+        </Route>
+      </Switch>
+        {/* <Footer /> */}
       </Router>
     </div>
   );
