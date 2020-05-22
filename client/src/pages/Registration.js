@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import Header from "../components/Header";
 import "./pages.css";
 import { BrowserRouter as Router, Link, Redirect } from "react-router-dom";
 
@@ -49,7 +50,7 @@ class Signup extends Component {
           >
             {" "}
             <h1 className="go-green">Be Green</h1>
-            <img src="/assets/images/recyclelogo.jpg" alt-pro="img"></img>
+            <Header />
             <form className="login animated fadeIn delay-0.5s">
               {" "}
               <div className="field">
@@ -116,13 +117,13 @@ class Signup extends Component {
 export default Signup;
 
 //error message
-// <div class="row">
-// <form class="col s12">
-//   <div class="row">
-//     <div class="input-field col s12">
-//       <input id="email" type="email" class="validate">
+// <div className="row">
+// <form className="col s12">
+//   <div className="row">
+//     <div className="input-field col s12">
+//       <input id="email" type="email" className="validate">
 //       <label for="email">Email</label>
-//       <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
+//       <span className="helper-text" data-error="wrong" data-success="right">Helper text</span>
 //     </div>
 //   </div>
 // </form>

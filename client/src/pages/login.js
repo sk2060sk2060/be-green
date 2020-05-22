@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import "./pages.css";
 import { BrowserRouter as Router, Link, Redirect } from "react-router-dom";
+import Header from "../components/Header";
 
 class Login extends Component {
   state = {
@@ -31,16 +32,16 @@ class Login extends Component {
 
     return (
       <div>
-        <div class="container center">
-          <div class="card has-text-centered is-wide card-content">
-            <h1 class="go-green">Be Green</h1>
+        <div className="container center">
+          <div className="card has-text-centered is-wide card-content">
+            <h1 className="go-green">Be Green</h1>
 
-            <img src="/assets/images/recyclelogo.jpg" alt-pro="img"></img>
+            <Header />
 
-            <form class="login animated fadeIn delay-0.5s">
-              <div class="field">
+            <form className="login animated fadeIn delay-0.5s">
+              <div className="field">
                 Login
-                <p class="control has-icons-left has-icons-right">
+                <p className="control has-icons-left has-icons-right">
                   <input
                     onChange={this.handleChange}
                     value={this.state.email}
@@ -49,33 +50,33 @@ class Login extends Component {
                     name="email"
                   />
 
-                  <span class="icon is-small is-left">
-                    <i class="fas fa-envelope"></i>
+                  <span className="icon is-small is-left">
+                    <i className="fas fa-envelope"></i>
                   </span>
-                  <span class="icon is-small is-right">
-                    <i class="fas fa-check"></i>
+                  <span className="icon is-small is-right">
+                    <i className="fas fa-check"></i>
                   </span>
                 </p>
               </div>
-              <div class="field">
-                <p class="control has-icons-left">
+              <div className="field">
+                <p className="control has-icons-left">
                   <input
                     onChange={this.handleChange}
                     value={this.state.password}
-                    class="input"
+                    className="input"
                     type="password"
                     placeholder="Password"
                     name="password"
                   />
-                  <span class="icon is-small is-left">
-                    <i class="fas fa-lock"></i>
+                  <span className="icon is-small is-left">
+                    <i className="fas fa-lock"></i>
                   </span>
                 </p>
               </div>
-              <div class="field">
-                <p class="control">
+              <div className="field">
+                <p className="control">
                   <button
-                    class="button is-info is-light"
+                    className="button is-info is-light"
                     onClick={this.handleSubmit}
                   >
                     Login
