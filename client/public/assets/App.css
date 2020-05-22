@@ -10,12 +10,12 @@
   width: 50%;
   margin: 0% 23%;
 }
-body {
+/* body {
   background: url("/assets/images/forestlakebackground.jpg") no-repeat center
     center;
   background-size: cover;
-  height: 900px;
-}
+  height: 100%;
+} */
 
 #email-input {
   width: 360px;
@@ -25,62 +25,10 @@ body {
   width: 400px;
 }
 
-#backgroundimg {
-  background: url("/assets/images/forestlakebackground.jpg");
-  background-repeat: no-repeat;
-}
-
 .footer-copyright {
   background-color: rgba(3, 168, 244, 0.69);
 }
 
 .go-green {
   color: rgb(8, 19, 9);
-}
-
-img {
-  width: 100px;
-  height: 100px;
-}
-
-.material-icons {
-  color: green;
-}
-
-#map {
-  height: 60%;
-  width: 60%;
-  margin: -10% 5%;
-  float: right;
-}
-.input {
-  margin-left: 15%;
-  height: 30px;
-}
-.searchbtn {
-  margin-top: 20%;
-  margin-left: 2%;
-  height: 30px;
-}
-
-body {
-  background-image: url("/assets/images/forest-trees.jpg");
-
-  /* Background image is centered vertically and horizontally at all times */
-  background-position: center center;
-
-  /* Background image doesn't tile */
-  background-repeat: no-repeat;
-
-  /* Background image is fixed in the viewport so that it doesn't move when 
-     the content's height is greater than the image's height */
-  background-attachment: fixed;
-
-  /* This is what makes the background image rescale based
-     on the container's size */
-  background-size: cover;
-
-  /* Set a background color that will be displayed
-     while the background image is loading */
-  background-color: rgba(163, 248, 163, 0.712);
 }
