@@ -2,19 +2,24 @@ import axios from "axios";
 
 export default {
   // Gets all books
-  getBooks: function() {
-    return axios.get("/api/books");
+  getMaps: function () {
+    return axios.get(
+      `https:api.earth911.com/earth911.searchLocations?api_key=7827591ea2eb59e9&latitude=48.8583701&longitude=2.2922926`
+    );
   },
-  // Gets the book with the given id
-  getBook: function(id) {
-    return axios.get("/api/books/" + id);
+  getMaterial: function (topic) {
+    return axios.get(
+      `https://api.earth911.com/earth911.searchMaterials?api_key=7827591ea2eb59e9&query=${topic}`
+    );
   },
-  // Deletes the book with the given id
-  deleteBook: function(id) {
-    return axios.delete("/api/books/" + id);
+  getID: function (materialIds) {
+    return axios.get(
+      `https:api.earth911.com/earth911.searchLocations?api_key=7827591ea2eb59e9&latitude=39.742043&longitude=-104.991531&${materialIds
+        .map((materialId) => "material_id[]=" + materialId + "&")
+        .join("")}`
+    );
   },
-  // Saves a book to the database
-  saveBook: function(bookData) {
-    return axios.post("/api/books", bookData);
-  }
+  getSave: function (text, lat, lng) {
+    return axios.post();
+  },
 };

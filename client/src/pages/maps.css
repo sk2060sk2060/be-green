@@ -1,43 +1,21 @@
-.card-content {
-  width: 50%;
-  margin: 5% 23% 5% 23%;
-  padding-top: 25px;
+#map {
+  height: 60%;
+  width: 60%;
+  margin: -10% 5%;
+  float: right;
 }
-
-#registerbox {
-  background-color: rgba(109, 192, 109, 0.781);
-  text-align: center;
+.input {
+  margin-left: 15%;
+  height: 30px;
 }
-
-.go-green {
-  border: solid;
-  border-color: green;
-  background-color: rgba(134, 198, 228, 0.4);
-  padding: 30px;
-  margin-left: 20%;
-  margin-right: 20%;
-  font-size: 50px;
-}
-
-#registerbtn {
-  padding: 5px;
-  color: blue;
-}
-
-#loginbtn {
-  color: blue;
-}
-
-#einput {
-  width: 260px;
-}
-
-#pinput {
-  width: 260px;
+.searchbtn {
+  margin-top: 20%;
+  margin-left: 2%;
+  height: 30px;
 }
 
 body {
-  background-image: url("/assets/images/forestlakebackground.jpg");
+  background-image: url("/assets/images/forest-trees.jpg");
 
   /* Background image is centered vertically and horizontally at all times */
   background-position: center center;
