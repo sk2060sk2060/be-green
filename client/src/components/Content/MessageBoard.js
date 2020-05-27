@@ -38,6 +38,9 @@ function MessageBoard() {
       <CardContent>
         <Typography variant="h6">Message Board</Typography>
         <Typography variant="body2">Be inspired. Share your story.</Typography>
+        =======
+        <Typography variant="h6">Find Out More</Typography>
+        <Typography variant="body2">Search Environmental News.</Typography>
       </CardContent>
       <CardActionArea className={classes.cardAction}>
         <div>
