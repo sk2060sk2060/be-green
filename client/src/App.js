@@ -11,6 +11,7 @@ import Login from "./pages/login";
 import MainPage from "./pages/mainpage";
 import Maps from "./pages/maps";
 import Articles from  "./pages/Articles";
+import Messages from "./pages/Messages";
 
 function App() {
   return (
@@ -37,7 +38,10 @@ function App() {
         </Route>
         <Route exact path={["/articles"]}>
           <Articles />
-        </Route>                  
+        </Route> 
+        <Route exact path={["/messages"]}>
+          <Messages />
+        </Route>                          
         <Route>
           <NoMatch />
         </Route>
