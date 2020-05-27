@@ -1,20 +1,19 @@
 import React from "react";
-import { AppBar, Toolbar, Typography } from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import logo from "./recyclelogo.jpg";
 
 const useStyles = makeStyles({
   logo: {
-    maxWidth: 50,
-    maxHeight: 50,
+    maxWidth: 100,
+    maxHeight: 100,
   },
   logoLocation: {
-    marginLeft: "auto",
-    marginRight: "auto",
+    margin: "auto",
   },
-  toolbarColor: {
-    backgroundColor: "#4caf50",
-  },
+  // toolbarColor: {
+  //   backgroundColor: "hsla(148, 43%, 42%, 0.8)",
+  // },
 });
 
 function Header() {
@@ -22,13 +21,13 @@ function Header() {
 
   return (
     <div>
-      <AppBar position="static">
-        <Toolbar className={classes.toolbarColor}>
-          <Typography className={classes.logoLocation}>
-            <img src={logo} alt="logo" className={classes.logo} mx="auto" />
-          </Typography>
-        </Toolbar>
-      </AppBar>
+      {/* <AppBar position="static">
+        <Toolbar className={classes.toolbarColor}> */}
+      <Typography className={classes.logoLocation}>
+        <img src={logo} alt="logo" className={classes.logo} mx="auto" />
+      </Typography>
+      {/* </Toolbar>
+      </AppBar> */}
     </div>
   );
 }

@@ -1,5 +1,10 @@
 import React from "react";
-import { Card, CardContent, CardActionArea, Typography } from "@material-ui/core";
+import {
+  Card,
+  CardContent,
+  CardActionArea,
+  Typography,
+} from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
@@ -21,9 +26,7 @@ function LearnMoreCard() {
   return (
     <Card className={classes.cardStyle}>
       <CardContent>
-        <Typography variant="h6">
-          Learn More
-        </Typography>
+        <Typography variant="h6">Learn More</Typography>
       </CardContent>
       <CardActionArea>
         <div

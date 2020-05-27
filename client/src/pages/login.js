@@ -22,28 +22,26 @@ class Login extends Component {
   handleSubmit = async (event) => {
     event.preventDefault();
     var userData = {
-      email:this.state.email,
-      password: this.state.password
+      email: this.state.email,
+      password: this.state.password,
     };
-    console.log("send login userdata:", userData)
- 
+    console.log("send login userdata:", userData);
+
     const response = await axios.post("/api/users/checkuser", userData);
     const { status, message } = response.data;
     console.log({ status, message });
 
-    if (status === 'ok') {
-      this.setState({ login: true })
-
+    if (status === "ok") {
+      this.setState({ login: true });
     }
 
-    // axios call to the route 
+    // axios call to the route
     // if (!userData.email || !userData.password) {
     //     return;
     //   }
-      // If we have an email and password, run the signUpUser function
+    // If we have an email and password, run the signUpUser function
     //  signUpUser(userData.email, userData.password);
-
-}
+  };
 
   render() {
     if (this.state.login === true) return <Redirect to="/mainpage"></Redirect>;
@@ -51,7 +49,10 @@ class Login extends Component {
     return (
       <div>
         <div className="container center">
-          <div className="card has-text-centered is-wide card-content">
+          <div
+            className="card has-text-centered is-wide card-content"
+            id="loginbox"
+          >
             <h1 className="go-green">Be Green</h1>
 
             <Header />
@@ -61,6 +62,7 @@ class Login extends Component {
                 Login
                 <p className="control has-icons-left has-icons-right">
                   <input
+                    id="einput"
                     onChange={this.handleChange}
                     value={this.state.email}
                     type="email"
@@ -79,9 +81,9 @@ class Login extends Component {
               <div className="field">
                 <p className="control has-icons-left">
                   <input
+                    id="pinput"
                     onChange={this.handleChange}
                     value={this.state.password}
-                    className="input"
                     type="password"
                     placeholder="Password"
                     name="password"

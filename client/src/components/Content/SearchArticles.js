@@ -1,5 +1,10 @@
 import React from "react";
-import { Card, CardContent, CardActionArea, Typography } from "@material-ui/core";
+import {
+  Card,
+  CardContent,
+  CardActionArea,
+  Typography,
+} from "@material-ui/core";
 import { ListItem, ListItemText } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -18,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     // backgroundColor: "#008B8B",
     // background: "hsla(148, 43%, 42%, 0.51)",
     background: "hsla(148, 43%, 42%, 0.8)",
-  }
+  },
 }));
 
 function ListItemLink(props) {
@@ -31,19 +36,15 @@ function SearchArticles() {
   return (
     <Card className={classes.cardStyle}>
       <CardContent>
-        <Typography variant="h6">
-          Find Out More
-        </Typography>
-        <Typography variant="body2">
-          Search Environmental News.
-        </Typography>
+        <Typography variant="h6">Find Out More</Typography>
+        <Typography variant="body2">Search Environmental News.</Typography>
       </CardContent>
       <CardActionArea className={classes.cardAction}>
         <div>
           <ListItemLink href="/articles">
             {/* <ListItemText primary="Chat It Up >>" /> */}
             <ListItemText primary="Search Articles >>" />
-          </ListItemLink>  
+          </ListItemLink>
         </div>
       </CardActionArea>
     </Card>

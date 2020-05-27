@@ -23,3 +23,16 @@ export default {
     return axios.post();
   },
 };
+
+// var createAndSavePerson = function(done) {
+//   var person = new Person({
+//     name: 'Bob',
+//     age: 64,
+//     favoriteFoods: ["icecream", "pasta"]
+//   });
+
+//   person.save(function(err, data) {
+//     if (err) return done(err);
+//     return done(null,data);
+//   });
+//  };
