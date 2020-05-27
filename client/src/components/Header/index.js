@@ -9,8 +9,7 @@ const useStyles = makeStyles({
     maxHeight: 80,
   },
   logoLocation: {
-    marginLeft: "auto",
-    marginRight: "auto",
+    margin: "auto",
   },
   // toolbarColor: {
   //   backgroundColor: "#4caf50",

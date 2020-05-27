@@ -14,16 +14,6 @@ const useStyles = makeStyles({
     fontFamily: "Arial",
   },
 
-  // .go-green {
-  //   border: solid;
-  //   border-color: green;
-  //   background-color: rgba(134, 198, 228, 0.4);
-  //   padding: 30px;
-  //   margin-left: 20%;
-  //   margin-right: 20%;
-  //   font-size: 50px;
-  // }
-
   textContent: {
     textAlign: "center",
     fontWeight: "bold",
@@ -41,6 +31,7 @@ function SubHeader() {
           Be Green
         </Typography>
       </Box>
+
       <Box component="div" pt={1} pb={1}>
         <Typography variant="h6" className={classes.textContent}>
           Change your habits. Change the world.
