@@ -25,24 +25,24 @@ function ListItemLink(props) {
   return <ListItem button component="a" {...props} />;
 }
 
-function MessageBoard() {
+function SearchArticles() {
   const classes = useStyles();
 
   return (
     <Card className={classes.cardStyle}>
       <CardContent>
         <Typography variant="h6">
-          Live Chat Room
+          Find Out More
         </Typography>
         <Typography variant="body2">
-          Be inspired. Share your story.
+          Search Environmental News.
         </Typography>
       </CardContent>
       <CardActionArea className={classes.cardAction}>
         <div>
-          <ListItemLink href="/messages">
+          <ListItemLink href="/articles">
             {/* <ListItemText primary="Chat It Up >>" /> */}
-            <ListItemText primary="Chat It Up >>" />
+            <ListItemText primary="Search Articles >>" />
           </ListItemLink>  
         </div>
       </CardActionArea>
@@ -50,4 +50,4 @@ function MessageBoard() {
   );
 }
 
-export default MessageBoard;
+export default SearchArticles;

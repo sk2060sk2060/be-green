@@ -3,10 +3,11 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Grid } from "@material-ui/core";
 import RecycleInfoCard from "./RecycleInfoCard";
 import RecycleLocationCard from "./RecycleLocationCard";
-import MessageBoard from "./MessageBoard";
+import SearchArticles from "./SearchArticles";
 import RecycleProjectsCard from "./RecycleProjectsCard";
 import LearnMoreCard from "./LearnMoreCard";
-import WhyRecycleCard from "./WhyRecycleCard"
+import WhyRecycleCard from "./WhyRecycleCard";
+import MessageBoard from "./MessageBoard";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -31,7 +32,7 @@ function Content() {
           <RecycleLocationCard />
         </Grid>
         <Grid item md={4}>
-          <MessageBoard />
+          <SearchArticles />
         </Grid>
       </Grid>
 
@@ -46,6 +47,13 @@ function Content() {
           <LearnMoreCard />
         </Grid>
       </Grid>
+
+      <Grid container>
+        <Grid item md={4}>
+          <MessageBoard />
+        </Grid>
+      </Grid>      
+
     </div>
   );
 }
