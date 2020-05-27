@@ -17,12 +17,12 @@ const useStyles = makeStyles((theme) => ({
     margin: "20px",
     // background: "#008080",
     // maxWidth: 345,
-    background: "rgba(109, 192, 109, 0.9)",
+    background: "hsla(148, 43%, 42%, 0.8)",
   },
   cardAction: {
     // backgroundColor: "#008B8B",
     // background: "hsla(148, 43%, 42%, 0.51)",
-    background: "rgba(109, 192, 109, 0.9)",
+    background: "hsla(148, 43%, 42%, 0.8)",
   },
 }));
 

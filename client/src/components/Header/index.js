@@ -5,14 +5,14 @@ import logo from "./recyclelogo.jpg";
 
 const useStyles = makeStyles({
   logo: {
-    maxWidth: 80,
-    maxHeight: 80,
+    maxWidth: 100,
+    maxHeight: 100,
   },
   logoLocation: {
     margin: "auto",
   },
   // toolbarColor: {
-  //   backgroundColor: "#4caf50",
+  //   backgroundColor: "hsla(148, 43%, 42%, 0.8)",
   // },
 });
 
@@ -21,13 +21,13 @@ function Header() {
 
   return (
     <div>
-      {/* <AppBar position="static"> */}
-      {/* <Toolbar className={classes.toolbarColor}> */}
+      {/* <AppBar position="static">
+        <Toolbar className={classes.toolbarColor}> */}
       <Typography className={classes.logoLocation}>
         <img src={logo} alt="logo" className={classes.logo} mx="auto" />
       </Typography>
-      {/* </Toolbar> */}
-      {/* </AppBar> */}
+      {/* </Toolbar>
+      </AppBar> */}
     </div>
   );
 }

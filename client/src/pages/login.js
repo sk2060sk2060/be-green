@@ -34,6 +34,13 @@ class Login extends Component {
     if (status === "ok") {
       this.setState({ login: true });
     }
+
+    // axios call to the route
+    // if (!userData.email || !userData.password) {
+    //     return;
+    //   }
+    // If we have an email and password, run the signUpUser function
+    //  signUpUser(userData.email, userData.password);
   };
 
   render() {
@@ -89,7 +96,6 @@ class Login extends Component {
               <div className="field">
                 <p className="control">
                   <button
-                    id="loginbtn"
                     className="button is-info is-light"
                     onClick={this.handleSubmit}
                   >

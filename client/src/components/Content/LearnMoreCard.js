@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     margin: "20px",
     // background: "#00008080",
     // background: "hsla(148, 43%, 42%, 0.51)",
-    background: "rgba(109, 192, 109, .9)",
+    background: "hsla(148, 43%, 42%, 0.8)",
   },
 }));
 
