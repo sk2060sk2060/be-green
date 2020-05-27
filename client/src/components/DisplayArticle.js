@@ -1,28 +1,37 @@
 import React from "react";
-import { ListItem, ListItemText } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
-
-const useStyles = makeStyles((theme) => ({
-  listItem: {
-    background: "hsla(148, 43%, 42%, 0.8)",
-    // backgroundColor: "rgba(3, 168, 244, 0.69)",
-    padding: "10px",
-    fontWeight: "bolder",
-  }
-}));
+import { Typography, ListItem, ListItemText, ListItemIcon } from "@material-ui/core";
+import CachedIcon from '@material-ui/icons/Cached';
 
 function ListItemLink(props) {
     return <ListItem button component="a" {...props} />;
 }
 
 function DisplayArticle(props) {
-  const classes = useStyles();
-  console.log(props);
-    return (
-    <ListItemLink href={props.url} target= "_blank">
-      <ListItemText primary={props.description} className={classes.listItem}/>
-    </ListItemLink>
-    )
+  return (
+    <ListItem style={{fontWeight: 700}}> 
+      <ListItemIcon style={{color: "green"}}>
+        <CachedIcon />
+      </ListItemIcon> 
+      <ListItemLink  href={props.url} target= "_blank" style={{display: "block", width: "100%", fontWeight: "bolder" }}>
+         <ListItemText disableTypography variant="h4" primary={props.description}/>   
+      <ListItemText
+        // primary={props.url}
+        secondary={
+          <React.Fragment>
+            <Typography
+              component="span"
+              variant="body1"
+              color="textPrimary"
+            >
+              Abstract: 
+            </Typography>
+            {" " + props.abstract}
+          </React.Fragment>
+        }
+      /> 
+      </ListItemLink>  
+    </ListItem>  
+  );
 }
-export default DisplayArticle;
 
+export default DisplayArticle;
