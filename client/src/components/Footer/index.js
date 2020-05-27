@@ -5,7 +5,7 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    backgroundColor: "rgba(3, 168, 244, 0.69)",
+    // backgroundColor: "rgba(3, 168, 244, 0.69)",
   },
   typography: {
     padding: theme.spacing(2),
