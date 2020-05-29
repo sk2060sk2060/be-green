@@ -22,6 +22,11 @@ export default {
   getSave: function (text, lat, lng) {
     return axios.post();
   },
+  getAddress: async function(latitude, longitude) {
+    return await axios.get(
+      `https://us1.locationiq.com/v1/reverse.php?key=ec3dca5fbce16a&lat=${latitude}&lon=${longitude}&format=json`
+    );
+  }
 };
 
 // var createAndSavePerson = function(done) {
