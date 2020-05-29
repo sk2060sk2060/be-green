@@ -115,16 +115,3 @@ class Signup extends Component {
 }
 
 export default Signup;
-
-//error message
-// <div className="row">
-// <form className="col s12">
-//   <div className="row">
-//     <div className="input-field col s12">
-//       <input id="email" type="email" className="validate">
-//       <label for="email">Email</label>
-//       <span className="helper-text" data-error="wrong" data-success="right">Helper text</span>
-//     </div>
-//   </div>
-// </form>
-// </div>
