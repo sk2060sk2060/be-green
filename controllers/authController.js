@@ -4,6 +4,17 @@ var User = require("../database/models/user");
 
 var userController = {};
 
+// Post login
+userController.doFav = function (req, res) {
+  console.log(req);
+  User.findOneAndUpdate(
+    { _id: req.user.id },
+    { $push: { favorites: req.body.favorite } }
+  );
+
+  return res.json({ status: "ok" });
+};
+
 // Restrict access to root page
 userController.home = function (req, res) {
   res.render("index", { user: req.user });

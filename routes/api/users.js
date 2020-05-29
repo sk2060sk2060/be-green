@@ -5,6 +5,13 @@ var auth = require("../../controllers/authController");
 // here we arrived with /api/users
 // restrict index for logged in user only
 //router.get("/", auth.home);
+router.post("/fav", (req, res) => {
+  console.log(req.body);
+  Users.findOneAndUpdate(
+    { _id: req.user.id },
+    { $push: { favorites: req.body } }
+  );
+});
 
 router.get("/", function (req, res) {
   console.log("GET API USERS");
@@ -17,7 +24,7 @@ router.get("/users/register", auth.register);
 router.post("/users/register", auth.doRegister);
 // route for register action   //     /api/users/register
 router.post("register", auth.doRegister); // route for register action   //     /api/users/register
-router.post("*", auth.doRegister);
+// router.post("*", auth.doRegister);
 router.post("users/register", auth.doRegister);
 // route to login page
 router.get("/login", auth.login);

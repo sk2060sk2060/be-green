@@ -19,20 +19,16 @@ export default {
         .join("")}`
     );
   },
-  getSave: function (text, lat, lng) {
-    return axios.post();
+  getSave: function (point) {
+    console.log(point);
+    axios({
+      method: "post",
+      url: "/api/users/fav",
+      data: {
+        favorite: point,
+      },
+    });
   },
 };
-
-// var createAndSavePerson = function(done) {
-//   var person = new Person({
-//     name: 'Bob',
-//     age: 64,
-//     favoriteFoods: ["icecream", "pasta"]
-//   });
-
-//   person.save(function(err, data) {
-//     if (err) return done(err);
-//     return done(null,data);
-//   });
-//  };
+//Users.findOneAndUpdate({_id: req.user.id}, {$push: {favorites: req.body}});
+//};
