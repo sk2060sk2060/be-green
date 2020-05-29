@@ -3,6 +3,8 @@ import GoogleMapReact from "google-map-react";
 import axios from "axios";
 import API from "../utils/API";
 import "./maps.css";
+import { get } from "mongoose";
+import Address from "../components/Addres";
 
 const AnyReactComponent = ({ text, lat, lng }) => {
   return (
@@ -30,10 +32,12 @@ const AnyReactComponent = ({ text, lat, lng }) => {
 };
 
 class SimpleMap extends Component {
+
   state = {
     topic: "",
     recycleLocations: [],
     center: { lat: 37.7576792, lng: -122.5078115 },
+    address: []
   };
   componentDidMount = () => {
     var options = {
@@ -74,10 +78,12 @@ class SimpleMap extends Component {
         console.log("back from getID: ", materialLocations);
 
         const recycleLocations = materialLocations.map((location, index) => {
+          console.log(location);
           return [
             location.description,
             location.latitude,
             location.longitude,
+            location.distance,
             index + 1,
           ];
         });
@@ -114,41 +120,44 @@ class SimpleMap extends Component {
     zoom: 11,
   };
 
-  render() {
-    var center = this.state;
-    console.log({ center });
-    return (
-      // Important! Always set the container height explicitly
-      <div>
-        <input
-          onChange={this.handleInputChange}
-          name="topic"
-          className="input"
-          placeholder="Material to Recycle"
-        ></input>
-        <button className="searchbtn" onClick={this.handleFormSubmit}>
-          Search Material
+
+render() {
+  var center = this.state;
+  console.log({ center });
+  return (
+    // Important! Always set the container height explicitly
+    <div>
+      <input
+        onChange={this.handleInputChange}
+        name="topic"
+        className="input"
+        placeholder="Material to Recycle"
+      ></input>
+      <button className="searchbtn" onClick={this.handleFormSubmit}>
+        Search Material
         </button>
 
-        <div style={{ height: "60vh", width: "60%" }}>
-          <GoogleMapReact
-            bootstrapURLKeys={{
-              key: "AIzaSyBZHzPiRourRDRoivXdhrjA4zdOhqEVYcQ",
-            }}
-            defaultCenter={this.state.center}
-            defaultZoom={this.props.zoom}
-            center={this.state.center}
-          >
-            {this.state.recycleLocations.map((elem) => {
-              return (
-                <AnyReactComponent lat={elem[1]} lng={elem[2]} text={elem[0]} />
-              );
-            })}
-          </GoogleMapReact>
-        </div>
+      <div style={{ height: "60vh", width: "60%" }}>
+        <GoogleMapReact
+          bootstrapURLKeys={{
+            key: "AIzaSyBZHzPiRourRDRoivXdhrjA4zdOhqEVYcQ",
+          }}
+          defaultCenter={this.state.center}
+          defaultZoom={this.props.zoom}
+          center={this.state.center}
+        >
+          {this.state.recycleLocations.map((elem) => {
+            return (
+              <AnyReactComponent lat={elem[1]} lng={elem[2]} text={elem[0]} />
+            );
+          })}
+        </GoogleMapReact>
       </div>
-    );
-  }
+      <Address data={this.state.recycleLocations.slice(0, 5)} />
+
+    </div>
+  );
+}
 }
 
 export default SimpleMap;
