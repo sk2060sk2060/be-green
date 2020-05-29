@@ -3,6 +3,8 @@ import GoogleMapReact from "google-map-react";
 import axios from "axios";
 import API from "../utils/API";
 import "./maps.css";
+import { get } from "mongoose";
+import Address from "../components/Addres";
 
 const AnyReactComponent = ({ text, lat, lng, saveFav }) => {
   return (
@@ -35,6 +37,7 @@ class SimpleMap extends Component {
     topic: "",
     recycleLocations: [],
     center: { lat: 37.7576792, lng: -122.5078115 },
+    address: [],
   };
   componentDidMount = () => {
     var options = {
@@ -75,10 +78,12 @@ class SimpleMap extends Component {
         console.log("back from getID: ", materialLocations);
 
         const recycleLocations = materialLocations.map((location, index) => {
+          console.log(location);
           return [
             location.description,
             location.latitude,
             location.longitude,
+            location.distance,
             index + 1,
           ];
         });
@@ -147,16 +152,12 @@ class SimpleMap extends Component {
           >
             {this.state.recycleLocations.map((elem) => {
               return (
-                <AnyReactComponent
-                  saveFav={this.handleSaveFav}
-                  lat={elem[1]}
-                  lng={elem[2]}
-                  text={elem[0]}
-                />
+                <AnyReactComponent lat={elem[1]} lng={elem[2]} text={elem[0]} />
               );
             })}
           </GoogleMapReact>
         </div>
+        <Address data={this.state.recycleLocations.slice(0, 5)} />
       </div>
     );
   }

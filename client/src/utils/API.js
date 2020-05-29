@@ -29,6 +29,11 @@ export default {
       },
     });
   },
+  getAddress: async function(latitude, longitude) {
+    return await axios.get(
+      `https://us1.locationiq.com/v1/reverse.php?key=ec3dca5fbce16a&lat=${latitude}&lon=${longitude}&format=json`
+    );
+  }
 };
 //Users.findOneAndUpdate({_id: req.user.id}, {$push: {favorites: req.body}});
 //};
