@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
     // background: "#008080",
     // maxWidth: 345,
     background: "hsla(148, 43%, 42%, 0.8)",
+    width: 345,
   },
   cardAction: {
     // backgroundColor: "#008B8B",

@@ -37,7 +37,7 @@ class SimpleMap extends Component {
     topic: "",
     recycleLocations: [],
     center: { lat: 37.7576792, lng: -122.5078115 },
-    address: [],
+    // address: [],
   };
   componentDidMount = () => {
     var options = {
@@ -61,6 +61,10 @@ class SimpleMap extends Component {
     console.log(`Longitude: ${crd.longitude}`);
     console.log(`More or less ${crd.accuracy} meters.`);
     this.setState({ center: { lat: crd.latitude, lng: crd.longitude } });
+    console.log("im in success call");
+    console.log(this.state.center.lat);
+    console.log(this.state.center.lng);
+    this.getMaps(this.state.center.lat, this.state.center.lng);
   };
 
   getMaps = () => {
@@ -73,7 +77,7 @@ class SimpleMap extends Component {
       console.log("BACK FROM GET MATERIAL: ", results);
       const materialIds = results.result.map((obj) => obj.material_id);
       // console.log(materialIds);
-      API.getID(materialIds).then(function (materialLocations) {
+      API.getID(materialIds, this.state.center.lat, this.state.center.lng).then(function (materialLocations) {
         materialLocations = materialLocations.data.result;
         console.log("back from getID: ", materialLocations);
 
