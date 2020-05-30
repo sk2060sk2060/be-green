@@ -76,7 +76,7 @@ class SimpleMap extends Component {
       results = results.data;
       console.log("BACK FROM GET MATERIAL: ", results);
       const materialIds = results.result.map((obj) => obj.material_id);
-      // console.log(materialIds);
+      //console.log(materialIds);
       API.getID(materialIds, this.state.center.lat, this.state.center.lng).then(function (materialLocations) {
         materialLocations = materialLocations.data.result;
         console.log("back from getID: ", materialLocations);
@@ -161,7 +161,7 @@ class SimpleMap extends Component {
             })}
           </GoogleMapReact>
         </div>
-        <Address data={this.state.recycleLocations.slice(0, 5)} />
+        <Address data={this.state.recycleLocations.slice(0, 1)} />
       </div>
     );
   }
