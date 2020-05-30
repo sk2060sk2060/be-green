@@ -28,6 +28,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     // background: "hsla(148, 43%, 42%, 0.51)",
     background: "hsla(148, 43%, 42%, 0.8)",
+    width: 345,
   },
   carouselInner: {
     height: "250px",
