@@ -13,8 +13,8 @@ export default {
       `https:api.earth911.com/earth911.searchLocations?api_key=7827591ea2eb59e9&latitude=${latitude}&longitude=${longitude}`
     );
   },  
-  getMaterial: function (topic) {
-    return axios.get(
+  getMaterial: async function (topic) {
+    return await axios.get(
       `https://api.earth911.com/earth911.searchMaterials?api_key=7827591ea2eb59e9&query=${topic}`
     );
   },
