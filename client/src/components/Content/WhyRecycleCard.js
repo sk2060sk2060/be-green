@@ -1,31 +1,19 @@
 import React from "react";
-import {
-  Card,
-  CardContent,
-  CardActionArea,
-  Typography,
-} from "@material-ui/core";
+import { Card, CardContent, CardActionArea, Typography } from "@material-ui/core";
 import { List, ListItem } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
   heading: {
-    // fontSize: theme.typography.pxToRem(15),
-    // fontWeight: theme.typography.fontWeightRegular,
     paddingLeft: "2px",
     marginLeft: "10px",
   },
   cardStyle: {
     margin: "20px",
-    // background: "#008080",
-    // maxWidth: 345,
-    // background: "hsla(148, 43%, 42%, 0.51)",
     background: "hsla(148, 43%, 42%, 0.8)",
     width: 345,
   },
   expansionPanel: {
-    // backgroundColor: "#008B8B",
-    // background: "hsla(148, 43%, 42%, 0.51)",
     background: "hsla(148, 43%, 42%, 0.8)",
   },
 }));

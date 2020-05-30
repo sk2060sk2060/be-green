@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  Card,
-  CardContent,
-  CardActionArea,
-  Typography,
-} from "@material-ui/core";
+import { Card, CardContent, CardActionArea, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
@@ -14,8 +9,6 @@ const useStyles = makeStyles((theme) => ({
   },
   cardStyle: {
     margin: "20px",
-    // background: "#00008080",
-    // background: "hsla(148, 43%, 42%, 0.51)",
     background: "hsla(148, 43%, 42%, 0.8)",
     width: 345,
   },
@@ -37,9 +30,6 @@ function LearnMoreCard() {
             paddingBottom: "50%" /* 16:9 */,
             paddingTop: 2,
             height: 300,
-            // width: 350,
-            // height: "300px",
-            // width: "350px",
           }}
         >
           <iframe
