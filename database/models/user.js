@@ -25,22 +25,6 @@ userSchema.methods = {
   },
 };
 
-// Define hooks for pre-saving
-// Hooks are automatic methods that run during various phases of the User Model lifecycle
-// In this case, before a User is created, we will automatically hash their password
-// userSchema.pre("save", function (next) {
-//   con
-//   if (!this.password) {
-//     console.log("models/user.js =======NO PASSWORD PROVIDED=======");
-//     next();
-//   } else {
-//     console.log("models/user.js hashPassword in pre save");
-
-//     this.password = this.hashPassword(this.password);
-//     next();
-//   }
-// });
-
 userSchema.plugin(passportLocalMongoose);
 
 module.exports = mongoose.model("User", userSchema);
