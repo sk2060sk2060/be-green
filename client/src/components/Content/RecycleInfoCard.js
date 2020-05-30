@@ -25,6 +25,7 @@ const useStyles = makeStyles((theme) => ({
     // maxWidth: 345,
     // background: "hsla(148, 43%, 42%, 0.51)",
     background: "hsla(148, 43%, 42%, 0.8)",
+    width: 345,
   },
   expansionPanel: {
     // backgroundColor: "#008B8B",
