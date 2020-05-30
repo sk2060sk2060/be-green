@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "be3aa04b4a51f0add4ad",
+    "revision": "23328c7a1be0cb2879f3",
     "url": "/static/css/main.0cc1671e.chunk.css"
   },
   {
-    "revision": "be3aa04b4a51f0add4ad",
-    "url": "/static/js/main.bf5fce66.chunk.js"
+    "revision": "23328c7a1be0cb2879f3",
+    "url": "/static/js/main.579cc51b.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
     "url": "/static/js/runtime~main.a8a9905a.js"
   },
   {
-    "revision": "00f2e64e426803c54a16",
-    "url": "/static/js/2.ea857a89.chunk.js"
+    "revision": "ffa0825ae23ff5338010",
+    "url": "/static/js/2.aaab4530.chunk.js"
   },
   {
     "revision": "cf582897ba8ce23a867d16b9909d7c77",
@@ -44,7 +44,7 @@ self.__precacheManifest = [
     "url": "/static/media/light-bulb-art.71967edb.png"
   },
   {
-    "revision": "6920baa807dcdb3a6e90a299f3c9dc0e",
+    "revision": "56b2eab89e25363a60f875e2a7e0fc88",
     "url": "/index.html"
   }
 ];

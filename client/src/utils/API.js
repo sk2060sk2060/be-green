@@ -25,8 +25,8 @@ export default {
   //       .join("")}`
   //   );
   // },
-  getID: function (materialIds, latitude=39.742043, longitude=-104.991531) {
-    return axios.get(
+  getID: async function (materialIds, latitude=39.742043, longitude=-104.991531) {
+    return await axios.get(
       `https:api.earth911.com/earth911.searchLocations?api_key=7827591ea2eb59e9&latitude=${latitude}&longitude=${longitude}&${materialIds
         .map((materialId) => "material_id[]=" + materialId + "&")
         .join("")}`
