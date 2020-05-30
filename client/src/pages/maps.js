@@ -70,9 +70,9 @@ class SimpleMap extends Component {
   getMaps = () => {
     API.getMaps().then((result) => console.log(result));
   };
-  getMaterial = (topic) => {
+  getMaterial = async topic => {
     let saveFunction = this.saveLoc;
-    API.getMaterial(topic).then((results) => {
+    await API.getMaterial(topic).then((results) => {
       results = results.data;
       console.log("BACK FROM GET MATERIAL: ", results);
       const materialIds = results.result.map((obj) => obj.material_id);
