@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "afcab19b1d37c7718c97",
+    "revision": "4b25c02a3b110e513c82",
     "url": "/static/css/main.0cc1671e.chunk.css"
   },
   {
-    "revision": "afcab19b1d37c7718c97",
-    "url": "/static/js/main.5a788652.chunk.js"
+    "revision": "4b25c02a3b110e513c82",
+    "url": "/static/js/main.70929312.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -44,7 +44,7 @@ self.__precacheManifest = [
     "url": "/static/media/light-bulb-art.71967edb.png"
   },
   {
-    "revision": "9967efe6bd5213af07c030fb6849eaf7",
+    "revision": "86df201e6ec54afdc47312c1a76ff021",
     "url": "/index.html"
   }
 ];

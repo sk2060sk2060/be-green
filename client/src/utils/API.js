@@ -32,8 +32,7 @@ export default {
     console.log(materialIdMap);
     
     return axios.get(
-      `https:api.earth911.com/earth911.searchLocations?api_key=7827591ea2eb59e9&latitude=${latitude}&longitude=${longitude}&${materialIds
-        .map((materialId) => materialId)}`
+      `https:api.earth911.com/earth911.searchLocations?api_key=7827591ea2eb59e9&latitude=${latitude}&longitude=${longitude}&${materialIdMap}`
     );
   },  
   getSave: function (point) {
