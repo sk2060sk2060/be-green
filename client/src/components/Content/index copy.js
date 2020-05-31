@@ -1,50 +1,21 @@
-const express = require("express");
-const passport = require("passport");
-const mongoose = require("mongoose");
-const app = express();
+import React from "react";
+
+// Setup basic express server
+var express = require('express');
+var app = express();
 var path = require('path');
 var server = require('http').createServer(app);
-var io = require("socket.io")(server);
-mongoose.Promise = global.Promise;
-const routes = require("./routes");
+var io = require('socket.io')(server);
+var port = process.env.PORT || 3000;
 
-const PORT = process.env.PORT || 3001;
-//const LocalStrategy = require("passport-local").Strategy;
-const LocalStrategy = require("./passport/localStrategy");
-// Define middleware here
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+server.listen(port, () => {
+  console.log('Server listening at port %d', port);
+});
+
+// Routing
 app.use(express.static(path.join(__dirname, 'public')));
-// Serve up static assets (usually on heroku)
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-}
-// Add routes, both API and view
 
-app.use(routes);
-// passport config items
-app.use(
-  require("express-session")({
-    secret: "keyboard cat",
-    resave: false,
-    saveUninitialized: false,
-  })
-);
-app.use(passport.initialize());
-app.use(passport.session());
-var User = require("./database/models/user");
-
-// passport.use(LocalStrategy(User.authenticate()));
-passport.serializeUser(User.serializeUser());
-passport.deserializeUser(User.deserializeUser());
-
-// Connect to the Mongo DB
-mongoose
-  .connect(process.env.MONGODB_URI || "mongodb://localhost/begreen")
-  .then(() => console.log("connection succesful"))
-  .catch((err) => console.error(err));
-   
- // Chatroom
+// Chatroom
 
 var numUsers = 0;
 
@@ -105,7 +76,4 @@ io.on('connection', (socket) => {
     }
   });
 });
-// Start the API server
-app.listen(PORT, function () {
-  console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
-});
+export default ChatServer;
