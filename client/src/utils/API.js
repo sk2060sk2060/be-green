@@ -10,7 +10,7 @@ export default {
   getMaps: function (latitude = 48.8583701, longitude = 2.2922926) {
     console.log(latitude, longitude);
     return axios.get(
-      `https:api.earth911.com/earth911.searchLocations?api_key=7827591ea2eb59e9&latitude=${latitude}&longitude=${longitude}`
+      `https://api.earth911.com/earth911.searchLocations?api_key=7827591ea2eb59e9&latitude=${latitude}&longitude=${longitude}`
     );
   },
   getMaterial: async function (topic) {
