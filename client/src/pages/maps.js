@@ -70,30 +70,33 @@ class SimpleMap extends Component {
   getMaps = () => {
     API.getMaps().then((result) => console.log(result));
   };
-  getMaterial = async topic => {
+  getMaterial = async (topic) => {
     let saveFunction = this.saveLoc;
     await API.getMaterial(topic).then((results) => {
       results = results.data;
       console.log("BACK FROM GET MATERIAL: ", results);
       const materialIds = results.result.map((obj) => obj.material_id);
       //console.log(materialIds);
-      API.getID(materialIds, this.state.center.lat, this.state.center.lng).then(function (materialLocations) {
-        materialLocations = materialLocations.data.result;
-        console.log("back from getID: ", materialLocations);
+      console.log("coords:", this.state.center.lat, this.state.center.lng);
+      API.getID(materialIds, this.state.center.lat, this.state.center.lng).then(
+        function (materialLocations) {
+          materialLocations = materialLocations.data.result;
+          console.log("back from getID: ", materialLocations);
 
-        const recycleLocations = materialLocations.map((location, index) => {
-          console.log(location);
-          return [
-            location.description,
-            location.latitude,
-            location.longitude,
-            location.distance,
-            index + 1,
-          ];
-        });
-        saveFunction(recycleLocations);
-        // initMap(recycleLocations)
-      });
+          const recycleLocations = materialLocations.map((location, index) => {
+            console.log(location);
+            return [
+              location.description,
+              location.latitude,
+              location.longitude,
+              location.distance,
+              index + 1,
+            ];
+          });
+          saveFunction(recycleLocations);
+          // initMap(recycleLocations)
+        }
+      );
     });
   };
 
