@@ -38,9 +38,6 @@ function App() {
         </Route>
         <Route exact path={["/articles"]}>
           <Articles />
-        </Route> 
-        <Route exact path={["/messages"]}>
-          <Messages />
         </Route>                          
         <Route>
           <NoMatch />
