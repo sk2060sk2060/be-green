@@ -12,9 +12,15 @@ export default {
     return axios.get(
       `https://api.earth911.com/earth911.searchLocations?api_key=7827591ea2eb59e9&latitude=${latitude}&longitude=${longitude}`
     );
+
   },
   getMaterial: function (topic) {
     return axios.get(
+
+  },  
+  getMaterial: async function (topic) {
+    return await axios.get(
+
       `https://api.earth911.com/earth911.searchMaterials?api_key=7827591ea2eb59e9&query=${topic}`
     );
   },
@@ -24,12 +30,21 @@ export default {
   //       .map((materialId) => "material_id[]=" + materialId + "&")
   //       .join("")}`
   //   );
-  // },
+  //
   getID: function (materialIds, latitude = 39.742043, longitude = -104.991531) {
     return axios.get(
       `https://api.earth911.com/earth911.searchLocations?api_key=7827591ea2eb59e9&latitude=${latitude}&longitude=${longitude}&${materialIds
         .map((materialId) => "material_id[]=" + materialId + "&")
-        .join("")}`
+        .join("")}
+  // 
+
+  getID: function (materialIds, latitude=39.742043, longitude=-104.991531) {
+    const materialIdMap = materialIds.map((materialId) =>  materialId )
+    console.log(materialIdMap);
+    
+    return axios.get(
+      `https:api.earth911.com/earth911.searchLocations?api_key=7827591ea2eb59e9&latitude=${latitude}&longitude=${longitude}&${materialIdMap}`
+
     );
   },
   getSave: function (point) {
@@ -50,3 +65,7 @@ export default {
 };
 //Users.findOneAndUpdate({_id: req.user.id}, {$push: {favorites: req.body}});
 //};
+
+
+
+

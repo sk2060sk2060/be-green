@@ -70,13 +70,13 @@ class SimpleMap extends Component {
   getMaps = () => {
     API.getMaps().then((result) => console.log(result));
   };
-  getMaterial = (topic) => {
+  getMaterial = async topic => {
     let saveFunction = this.saveLoc;
-    API.getMaterial(topic).then((results) => {
+    await API.getMaterial(topic).then((results) => {
       results = results.data;
       console.log("BACK FROM GET MATERIAL: ", results);
       const materialIds = results.result.map((obj) => obj.material_id);
-      // console.log(materialIds);
+      //console.log(materialIds);
       API.getID(materialIds, this.state.center.lat, this.state.center.lng).then(function (materialLocations) {
         materialLocations = materialLocations.data.result;
         console.log("back from getID: ", materialLocations);
@@ -168,3 +168,7 @@ class SimpleMap extends Component {
 }
 
 export default SimpleMap;
+
+
+
+

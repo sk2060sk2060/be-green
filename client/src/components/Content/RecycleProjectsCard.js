@@ -1,12 +1,6 @@
 import React from "react";
 import Carousel from "react-material-ui-carousel";
-import {
-  Card,
-  CardContent,
-  CardActionArea,
-  Typography,
-  Paper,
-} from "@material-ui/core";
+import { Card, CardContent, CardActionArea, Typography, Paper } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
 import owlImage from "./owlartcraft.jpg";
@@ -23,10 +17,7 @@ const useStyles = makeStyles((theme) => ({
   },
   cardStyle: {
     margin: "20px",
-    // background: "#008080",
-    // maxWidth: 345,
     textAlign: "center",
-    // background: "hsla(148, 43%, 42%, 0.51)",
     background: "hsla(148, 43%, 42%, 0.8)",
     width: 345,
   },
