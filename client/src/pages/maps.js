@@ -164,10 +164,14 @@ class SimpleMap extends Component {
             })}
           </GoogleMapReact>
         </div>
-        <Address data={this.state.recycleLocations.slice(0, 1)} />
+        <Address data={this.state.recycleLocations.slice(0, 5)} />
       </div>
     );
   }
 }
 
 export default SimpleMap;
+
+
+
+
