@@ -33,7 +33,7 @@ function MessageBoard() {
       </CardContent>
       <CardActionArea className={classes.cardAction}>
         <div>
-          <ListItemLink href="/messages">
+          <ListItemLink href="http://localhost:3001/messages/">
             <ListItemText primary="Chat It Up >>" />
           </ListItemLink>
         </div>
